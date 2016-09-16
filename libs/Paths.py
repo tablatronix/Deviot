@@ -270,6 +270,13 @@ def getTempPath(file_name=False):
     if(file_name):
         tmp_path = os.path.join(tmp_path, file_name)
 
+    try:
+        os.makedirs(tmp_path)
+    except OSError as exc:
+        if exc.errno != errno.EEXIST:
+            raise exc
+        pass
+
     return tmp_path
 
 
