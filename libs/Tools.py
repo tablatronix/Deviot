@@ -707,6 +707,7 @@ def highlightError(view, conf=False):
 
     region = sublime.Region(0, view.size())
     sketch = view.substr(region)
+    string_before = ''
 
     for text in sketch.splitlines():
         if('before' in text):
