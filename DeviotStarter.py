@@ -346,6 +346,30 @@ class OpenLibraryFolderCommand(sublime_plugin.TextCommand):
         sublime.run_command('open_url', {'url': url})
 
 
+class ExtraLibraryFolderCommand(sublime_plugin.WindowCommand):
+    """
+    Adds the path to the folder where search extra libraries
+    """
+
+    def run(self):
+        Paths.selectDir(self.window, key='extra_lib', func=Preferences().set)
+
+
+class RemoveExtraLibraryFolderCommand(sublime_plugin.WindowCommand):
+    """
+    Removes the path of the extra library
+    """
+
+    def run(self):
+        Preferences().set('extra_lib', False)
+
+    def is_enabled(self):
+        if(Preferences().get('extra_lib', False)):
+            return True
+        else:
+            return False
+
+
 class BuildSketchCommand(sublime_plugin.TextCommand):
     """
     Trigger a method to build the files in the current

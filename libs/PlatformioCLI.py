@@ -272,6 +272,8 @@ class PlatformioCLI(CommandsPy):
         if(CMD.error_running):
             return
 
+        self.extraLibrary()
+
         command = ['run', '-e %s' % C['ENVIRONMENT']]
         CMD.runCommand(command, "built_project_{0}")
 
@@ -323,6 +325,8 @@ class PlatformioCLI(CommandsPy):
 
         # add ota auth
         self.authOTA()
+
+        self.extraLibrary()
 
         # run command
         CMD.runCommand(command, "uploading_firmware_{0}")
@@ -417,6 +421,29 @@ class PlatformioCLI(CommandsPy):
 
             if(C['CALLBACK'] == 'monitor'):
                 self.window.run_command('serial_monitor_run')
+
+    def extraLibrary(self):
+        extra = Preferences().get('extra_lib', False)
+
+        INIFILE = ConfigObj(C['INIPATH'], list_values=False)
+        ENVIRONMENT = 'env:%s' % C['ENVIRONMENT']
+
+        if(ENVIRONMENT not in INIFILE):
+            return
+
+        ENV = INIFILE[ENVIRONMENT]
+
+        if(not extra):
+            if('lib_extra_dirs' in ENV):
+                ENV.pop('lib_extra_dirs')
+            return
+
+        LIB = {'lib_extra_dirs': extra}
+        ENV.merge(LIB)
+
+        INIFILE.write()
+
+        
 
     def overrideSrc(self):
         """

@@ -92,8 +92,11 @@ msgstr "Library Options"
 msgid "menu_open_lib_folder"
 msgstr "Open Libraries Folder"
 
-msgid "menu_change_user_lib_path"
-msgstr "Change Folder Library Path"
+msgid "menu_extra_lib_foder"
+msgstr "Add Extra Library Folder"
+
+msgid "menu_remove_extra_lib_foder"
+msgstr "Remove Extra Library Folder"
 
 msgid "menu_build"
 msgstr "Build"

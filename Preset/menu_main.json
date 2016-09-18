@@ -44,6 +44,12 @@
                                 {
                                     "caption":"menu_open_lib_folder",
                                     "command":"open_library_folder"
+                                },{
+                                    "caption":"menu_extra_lib_foder",
+                                    "command":"extra_library_folder"
+                                },{
+                                    "caption":"menu_remove_extra_lib_foder",
+                                    "command":"remove_extra_library_folder"
                                 }
                             ]
             },
