@@ -213,7 +213,7 @@ class PlatformioCLI(CommandsPy):
         # avoid an error in a non native project if the folder of the
         # sketch has been renamed
         if(not C['NATIVE'] and os.path.exists(C['INIPATH'])):
-            INIFILE = ConfigObj(C['INIPATH'])
+            INIFILE = ConfigObj(C['INIPATH'], list_values=False)
 
             # check src_dir
             if('src_dir' in INIFILE['platformio']):
@@ -234,7 +234,7 @@ class PlatformioCLI(CommandsPy):
         CMD = C['CMDS']
         NATIVE = C['NATIVE']
         ENVIRONMENT = C['ENVIRONMENT']
-        INIFILE = ConfigObj(C['INIPATH'])
+        INIFILE = ConfigObj(C['INIPATH'], list_values=False)
 
         # checks if the environment was previously initialized
         for env in INIFILE:
@@ -425,7 +425,7 @@ class PlatformioCLI(CommandsPy):
         (when the file haven't PlatformIO structure)
         """
         # open platformio.ini
-        INIFILE = ConfigObj(C['INIPATH'])
+        INIFILE = ConfigObj(C['INIPATH'], list_values=False)
 
         # set 'src_dir' in [platformio]
         source = {'src_dir': C['SKETCHDIR']}
@@ -522,7 +522,7 @@ class PlatformioCLI(CommandsPy):
             password {str} -- password
         """
         password = Preferences().get('auth', '0')
-        INIFILE = ConfigObj(C['INIPATH'])
+        INIFILE = ConfigObj(C['INIPATH'], list_values=False)
         ENVIRONMENT = 'env:%s' % C['ENVIRONMENT']
 
         # remove flag
