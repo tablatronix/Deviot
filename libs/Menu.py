@@ -95,43 +95,38 @@ class Menu(object):
         list_env = Preferences().get('board_id', [])
         list_env.extend(Tools.getEnvFromFile())
         list_env = sorted(list(set(list_env)))
+        new_envs = list_env
 
         env_selected = Tools.getEnvironment()
         env_data = self.getTemplateMenu(
             file_name='platformio_boards.json', user_path=True)
         env_data = json.loads(env_data)
 
-        try:
-            for key, value in env_data.items():
-                try:
-                    id = key
-                    caption = value['name']
-                    vendor = value['vendor']
+        for value in env_data:
+            id = value['id']
+            caption = value['name']
+            vendor = value['vendor']
 
-                    for selected in list_env:
-                        if(selected == id):
-                            vendor = "%s | %s" % (vendor, id)
-                            environments.append([caption, vendor])
+            for selected in list_env:
+                if(selected == id):
+                    vendor = "%s | %s" % (vendor, id)
+                    environments.append([caption, vendor])
+                    new_envs.remove(selected)
 
-                            if(selected == env_selected):
-                                selected_index = index + 1
-                            index += 1
-                except:
-                    pass
-        except:  # PlatformIO 3
-            for value in env_data:
-                id = value['id']
-                caption = value['name']
-                vendor = value['vendor']
+                    if(selected == env_selected):
+                        selected_index = index + 1
+                    index += 1
+        
+        if(new_envs):
+            for env in new_envs:
+                id = env
+                caption = env
+                vendor = "unknown | %s" % (id)
+                environments.append([caption, vendor])
 
-                for selected in list_env:
-                    if(selected == id):
-                        vendor = "%s | %s" % (vendor, id)
-                        environments.append([caption, vendor])
-
-                        if(selected == env_selected):
-                            selected_index = index + 1
-                        index += 1
+                if(selected == env_selected):
+                        selected_index = index + 1
+                index += 1
 
         return [environments, selected_index]
 
