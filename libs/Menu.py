@@ -128,6 +128,9 @@ class Menu(object):
                         selected_index = index + 1
                 index += 1
 
+        if(len(environments) <= 1):
+            environments = [_("not_env_list")]
+
         return [environments, selected_index]
 
     def createLibraryImportMenu(self):

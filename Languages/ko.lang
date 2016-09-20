@@ -275,6 +275,9 @@ msgstr "Select an Environment From The List"
 msgid "select_port_list"
 msgstr "Select a Port From The List"
 
+msgid "not_env_list"
+msgstr "None Environment Available"
+
 msgid "init_project_{0}"
 msgstr "{0} 프로젝트를 초기화합니다 | 진행중...\n"
 

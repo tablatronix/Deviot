@@ -276,6 +276,9 @@ msgstr "Selecciona un Entorno de Desarrollo"
 msgid "select_port_list"
 msgstr "Selecciona un Puerto de la Lista"
 
+msgid "not_env_list"
+msgstr "Ningún Entorno de Desarrollo Disponible"
+
 msgid "init_project_{0}"
 msgstr "{0} Inicializando el proyecto | Procesando...\n"
 
