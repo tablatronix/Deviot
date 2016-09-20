@@ -275,13 +275,17 @@ class Menu(object):
 
         self.saveSublimeMenu(data=menu_data)
         self.createLanguageMenu()
-        self.translateContextMenu()
+        self.translateMenu('Context', 'sublime-menu')
 
-    def translateContextMenu(self):
+    def translateMenu(self, input_file, out_extension):
         """
-        Translate the context menu getting the preset file from context.json
+        Translate a menu from a JSON file. The output name will be
+        the same as the input JSON file.
+
+        input_file: JSON file name witout extension
+        out_extension: Extension name of the output file
         """
-        contex_file = self.getTemplateMenu(file_name='context.json')
+        contex_file = self.getTemplateMenu(file_name='%s.json' % input_file)
 
         for contex in contex_file:
             try:
@@ -289,8 +293,9 @@ class Menu(object):
             except:
                 pass
 
+        out_file = '%s.%s' % (input_file, out_extension)
         plugin = Paths.getPluginPath()
-        context_path = os.path.join(plugin, 'Context.sublime-menu')
+        context_path = os.path.join(plugin, out_file)
         preset_file = JSONFile(context_path)
         preset_file.setData(contex_file)
         preset_file.saveData()
