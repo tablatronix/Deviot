@@ -7,6 +7,15 @@
                 "text": "Deviot: "
             }
     },{
+        "keys": ["ctrl+shift+n"], 
+        "command": "deviot_new_sketch"
+    },{
+        "keys": ["ctrl+alt+b"], 
+        "command": "deviot_select_board"
+    },{
+        "keys": ["ctrl+alt+e"], 
+        "command": "select_env"
+    },{
         "keys": ["ctrl+shift+b"], 
         "command": "build_sketch"
     },{
@@ -15,6 +24,21 @@
     },{
         "keys": ["ctrl+shift+c"],
         "command": "clean_sketch"
+    },{
+        "keys": ["ctrl+shift+o"],
+        "command": "open_ini_file"
+    },{
+        "keys": ["alt+shift+s"],
+        "command": "show_console"
+    },{
+        "keys": ["alt+shift+h"],
+        "command": "hide_console"
+    },{
+        "keys": ["ctrl+alt+p"],
+        "command": "select_port"
+    },{
+        "keys": ["ctrl+shift+p"],
+        "command": "auth_change"
     },{
         "keys": ["alt+shift+v"],
         "command": "toggle_verbose"
@@ -37,6 +61,12 @@
         "keys": ["ctrl+shift+r"],
         "command": "remove_library"
     },{
+        "keys": ["ctrl+shift+i"],
+        "command": "import_library"
+    },{
+        "keys": ["ctrl+shift+e"],
+        "command": "list_library_examples"
+    },{
         "keys": ["ctrl+alt+r"],
         "command": "serial_monitor_run"
     },{
@@ -51,6 +81,18 @@
     },{
         "keys": ["alt+shift+c"],
         "command": "change_build_folder"
+    },{
+        "keys": ["alt+shift+t"],
+        "command": "use_cpp_template"
+    },{
+        "keys": ["alt+shift+n"],
+        "command": "use_always_native"
+    },{
+        "keys": ["alt+shift+d"],
+        "command": "change_default_path"
+    },{
+        "keys": ["ctrl+alt+d"],
+        "command": "remove_default_path"
     }
 
 ]

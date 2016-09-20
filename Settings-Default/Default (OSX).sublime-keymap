@@ -7,6 +7,15 @@
                 "text": "Deviot: "
             }
     },{
+        "keys": ["alt+n", "alt+s"], 
+        "command": "deviot_new_sketch"
+    },{
+        "keys": ["alt+s", "alt+b"], 
+        "command": "deviot_select_board"
+    },{
+        "keys": ["alt+s", "alt+e"], 
+        "command": "select_env"
+    },{
         "keys": ["alt+d", "alt+b"], 
         "command": "build_sketch"
     },{
@@ -15,6 +24,15 @@
     },{
         "keys": ["alt+d", "alt+c"],
         "command": "clean_sketch"
+    },{
+        "keys": ["alt+o", "alt+i"],
+        "command": "open_ini_file"
+    },{
+        "keys": ["alt+s", "alt+c"],
+        "command": "show_console"
+    },{
+        "keys": ["alt+h", "alt+c"],
+        "command": "hide_console"
     },{
         "keys": ["alt+b", "alt+o"],
         "command": "toggle_verbose"
@@ -37,6 +55,18 @@
         "keys": ["alt+l", "alt+r"],
         "command": "remove_library"
     },{
+        "keys": ["alt+l", "alt+i"],
+        "command": "import_library"
+    },{
+        "keys": ["alt+l", "alt+e"],
+        "command": "list_library_examples"
+    },{
+        "keys": ["alt+s", "alt+p"],
+        "command": "select_port"
+    },{
+        "keys": ["alt+p", "alt+c"],
+        "command": "auth_change"
+    },{
         "keys": ["alt+s", "alt+r"],
         "command": "serial_monitor_run"
     },{
@@ -46,10 +76,25 @@
         "keys": ["alt+u", "alt+p"],
         "command": "upgrade_pio"
     },{
+        "keys": ["alt+d", "alt+p"],
+        "command": "developer_pio"
+    },{
         "keys": ["alt+o", "alt+b"],
         "command": "open_build_folder"
     },{
         "keys": ["alt+c", "alt+b"],
         "command": "change_build_folder"
+    },{
+        "keys": ["alt+c", "alt+t"],
+        "command": "use_cpp_template"
+    },{
+        "keys": ["alt+a", "alt+n"],
+        "command": "use_always_native"
+    },{
+        "keys": ["alt+c", "alt+d"],
+        "command": "change_default_path"
+    },{
+        "keys": ["alt+r", "alt+d"],
+        "command": "remove_default_path"
     }
 ]
