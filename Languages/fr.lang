@@ -59,6 +59,9 @@ msgstr "Update Now"
 
 # Menu
 
+msgid "menu_quick_commands"
+msgstr "Quick Commands"
+
 msgid "menu_new_sketch"
 msgstr "Nouveau Sketch"
 
@@ -232,6 +235,114 @@ msgstr "de  Deviot"
 
 msgid "menu_about_pio"
 msgstr "de PlatformIO"
+
+
+# quick commands menu
+
+msgid "quick_new_sketch"
+msgstr "Deviot: New Sketch"
+
+msgid "quick_select_board"
+msgstr "Deviot: Select Board"
+
+msgid "quick_select_env"
+msgstr "Deviot: Select Environment"
+
+msgid "quick_build"
+msgstr "Deviot: Build"
+
+msgid "quick_upload"
+msgstr "Deviot: Upload"
+
+msgid "quick_clean"
+msgstr "Deviot: Clean"
+
+msgid "quick_open_build_file"
+msgstr "Deviot: Open Build Config File"
+
+msgid "quick_serial_port"
+msgstr "Deviot: Serial Port(s)"
+
+msgid "quick_change_ota_password"
+msgstr Deviot: Change OTA Password"
+
+msgid "quick_monitor_serial"
+msgstr "Deviot: Monitor Serial - Run/Stop"
+
+msgid "quick_monitor_send"
+msgstr "Deviot: Monitor Serial - Send"
+
+msgid "quick_ouput_deviot_console"
+msgstr "Deviot: Output in Deviot Console"
+
+msgid "quick_monitor_auto_scroll"
+msgstr "Deviot: Auto Scroll Monitor Serial"
+
+msgid "quick_search_lib"
+msgstr "Deviot: Search Library"
+
+msgid "quick_remove_lib"
+msgstr "Deviot: Remove Library"
+
+msgid "quick_import_lib"
+msgstr "Deviot: Import Library"
+
+msgid "quick_examples"
+msgstr "Deviot: Examples"
+
+msgid "quick_open_lib_folder"
+msgstr "Deviot: Open Libary Folder"
+
+msgid "quick_add_extra_lib_folder"
+msgstr "Deviot: Add Extra Library Folder"
+
+msgid "quick_remove_extra_lib_folder"
+msgstr "Deviot: Remove Extra Library Folder"
+
+msgid "quick_show_deviot_console"
+msgstr "Deviot: Show Deviot Console"
+
+msgid "quick_hide_deviot_console"
+msgstr "Deviot: Hide Deviot Console"
+
+msgid "quick_upgrade_pio"
+msgstr "Deviot: Upgrade PlatformIO"
+
+msgid "quick_development_pio"
+msgstr "Deviot: Use Development PlaformIO"
+
+msgid "quick_verbose_output"
+msgstr "Deviot: Show Verbose Output"
+
+msgid "quick_remove_preferences"
+msgstr "Deviot: Remove Preferences Files"
+
+msgid "quick_keep_temp_files"
+msgstr "Deviot: Keep Temp Files"
+
+msgid "quick_open_build_folder"
+msgstr "Deviot: Open Build Folder"
+
+msgid "quick_change_build_folder"
+msgstr "Deviot: Change Build Folder"
+
+msgid "quick_use_cpp"
+msgstr "Deviot: Use CPP File on New File"
+
+msgid "quick_use_pio_structure"
+msgstr "Deviot: Use PlatformIO Structure"
+
+msgid "quick_change_default_path"
+msgstr "Deviot: Change Default Path"
+
+msgid "quick_remove_default_path"
+msgstr "Deviot: Remove Default Path"
+
+msgid "quick_about_deviot"
+msgstr "Deviot: About Deviot"
+
+msgid "quick_about_pio"
+msgstr "Deviot: About PlatformIO"
 
 
 # Mensajes y errores

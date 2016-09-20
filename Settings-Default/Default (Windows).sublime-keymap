@@ -1,5 +1,12 @@
 [
     {
+        "keys": ["alt+q"], 
+        "command": "show_overlay",
+        "args": {
+                "overlay": "command_palette", 
+                "text": "Deviot: "
+            }
+    },{
         "keys": ["alt+d", "alt+b"], 
         "command": "build_sketch"
     },{

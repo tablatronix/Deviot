@@ -60,6 +60,9 @@ msgstr "Actualizar Ahora"
 
 # Menu
 
+msgid "menu_quick_commands"
+msgstr "Comandos Rápidos"
+
 msgid "menu_new_sketch"
 msgstr "Nuevo Sketch"
 
@@ -111,14 +114,14 @@ msgstr "Limpiar"
 msgid "menu_open_ini_file"
 msgstr "Abrir Archivo Para Compilación"
 
-msgid "menu_hide_console"
-msgstr "Ocultar Consola Deviot"
-
 msgid "menu_programmer"
 msgstr "Programador"
 
 msgid "menu_show_console"
 msgstr "Mostrar Consola Deviot"
+
+msgid "menu_hide_console"
+msgstr "Ocultar Consola Deviot"
 
 msgid "menu_serial_ports"
 msgstr "Puerto(s) Serial"
@@ -233,6 +236,114 @@ msgstr "Acerca de Deviot"
 
 msgid "menu_about_pio"
 msgstr "Acerca de PlatformIO"
+
+
+# quick commands menu
+
+msgid "quick_new_sketch"
+msgstr "Deviot: Nuevo Sketch"
+
+msgid "quick_select_board"
+msgstr "Deviot: Selecciona Una Placa"
+
+msgid "quick_select_env"
+msgstr "Deviot: Selecciona Un Entorno de Desarollo"
+
+msgid "quick_build"
+msgstr "Deviot: Compilar"
+
+msgid "quick_upload"
+msgstr "Deviot: Cargar"
+
+msgid "quick_clean"
+msgstr "Deviot: Limpiar"
+
+msgid "quick_open_build_file"
+msgstr "Deviot: Abrir Archivo Para Compilación"
+
+msgid "quick_serial_port"
+msgstr "Deviot: Puerto(s) Serial"
+
+msgid "quick_change_ota_password"
+msgstr Deviot: Cambiar Contraseña OTA"
+
+msgid "quick_monitor_serial"
+msgstr "Deviot: Monitor Serial - Iniciar/Parar"
+
+msgid "quick_monitor_send"
+msgstr "Deviot: Monitor Serial - Enviar"
+
+msgid "quick_ouput_deviot_console"
+msgstr "Deviot: Salida en Consola Deviot"
+
+msgid "quick_monitor_auto_scroll"
+msgstr "Deviot: Scroll Automático En Monitor Serial"
+
+msgid "quick_search_lib"
+msgstr "Deviot: Buscar Librería"
+
+msgid "quick_remove_lib"
+msgstr "Deviot: Eliminar Librería"
+
+msgid "quick_import_lib"
+msgstr "Deviot: Importar Librería"
+
+msgid "quick_examples"
+msgstr "Deviot: Ejemplos"
+
+msgid "quick_open_lib_folder"
+msgstr "Deviot: Abrir Carpeta con Librerías"
+
+msgid "quick_add_extra_lib_folder"
+msgstr "Deviot: Agregar Carpeta Extra Para Librerías"
+
+msgid "quick_remove_extra_lib_folder"
+msgstr "Deviot: Eliminar Carpeta Extra Para Librerías"
+
+msgid "quick_show_deviot_console"
+msgstr "Deviot: Mostrar Consola Deviot"
+
+msgid "quick_hide_deviot_console"
+msgstr "Deviot: Ocultar Consola Deviot"
+
+msgid "quick_upgrade_pio"
+msgstr "Deviot: Actualizar PlatformIO"
+
+msgid "quick_development_pio"
+msgstr "Deviot: Usar Version en Desarrollo de Pio"
+
+msgid "quick_verbose_output"
+msgstr "Deviot: Salida Detallada al Compilar"
+
+msgid "quick_remove_preferences"
+msgstr "Deviot: Eliminar Archivos de Preferencias"
+
+msgid "quick_keep_temp_files"
+msgstr "Deviot: Mantener Archivos Temporales"
+
+msgid "quick_open_build_folder"
+msgstr "Deviot: Abrir Carpeta de Compilación"
+
+msgid "quick_change_build_folder"
+msgstr "Deviot: Cambiar Carpeta de Compilación"
+
+msgid "quick_use_cpp"
+msgstr "Deviot: Usar CPP con Nuevo Archivo"
+
+msgid "quick_use_pio_structure"
+msgstr "Deviot: Usar Estructura de PlatformIO"
+
+msgid "quick_change_default_path"
+msgstr "Deviot: Cambiar Directorio por Defecto"
+
+msgid "quick_remove_default_path"
+msgstr "Deviot: Eliminar Directorio por Defecto"
+
+msgid "quick_about_deviot"
+msgstr "Deviot: Acerca de Deviot"
+
+msgid "quick_about_pio"
+msgstr "Deviot: Acerca de PlatformIO"
 
 
 # Mensajes y errores

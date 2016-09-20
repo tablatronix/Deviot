@@ -4,7 +4,15 @@
         "mnemonic": "D",
         "id": "deviot",
         "children":
-        [            
+        [
+            {
+                "caption": "menu_quick_commands",
+                "command": "show_overlay",
+                "args": {"overlay": "command_palette", "text": "Deviot: "}
+            },
+            {
+                "caption": "-"
+            },            
             {
                 "caption": "menu_new_sketch",
                 "id": "menu_new_sketch",

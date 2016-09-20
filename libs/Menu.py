@@ -276,6 +276,7 @@ class Menu(object):
         self.saveSublimeMenu(data=menu_data)
         self.createLanguageMenu()
         self.translateMenu('Context', 'sublime-menu')
+        self.translateMenu('Default', 'sublime-commands')
 
     def translateMenu(self, input_file, out_extension):
         """
