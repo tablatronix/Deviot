@@ -215,7 +215,10 @@ class Menu(object):
 
         # check current platform
         try:
-            platform = data[sel_env]['platform'].lower()
+            for board in data:
+                if(board['id'] == sel_env):
+                    platform = board['platform'].lower()
+                    break
         except:
             platform = 'all'
 
