@@ -321,6 +321,8 @@ class PioInstall(object):
                                                     self.pio_cloud_ver,
                                                     self.pio_current_ver),
                                                   _('update_button'))
+            else:
+                update = True
 
             if(update):
                 if(not self.feedback):
