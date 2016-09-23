@@ -711,7 +711,10 @@ def highlightError(view, conf=False):
 
     for text in sketch.splitlines():
         if('before' in text):
-            string_before = search(u'\'(\w+)\'$', text).group(1)
+            try:
+                string_before = search(u'\'(\w+)\'$', text).group(1)
+            except:
+                string_before = ""
 
         if 'error:' in text:
             r_error = []
