@@ -617,7 +617,7 @@ class AddSerialIpCommand(sublime_plugin.WindowCommand):
         if(result != -1):
             result = (result if result != 0 else '')
             Preferences().set('id_port', result)
-            Menu().createSerialPortsMenu()
+            Preferences().set('port_bar', result)
 
 
 class AuthChangeCommand(sublime_plugin.WindowCommand):
