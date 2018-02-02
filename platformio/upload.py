@@ -79,9 +79,9 @@ class Upload(Initialize):
 
         self.after_complete()
 
-        if(get_setting('run_monitor', None) and out[0] == 0):
-            from ..libraries.serial import toggle_serial_monitor
-            toggle_serial_monitor()
+        # if(get_setting('run_monitor', None) and out[0] == 0):
+        from ..libraries.serial import toggle_serial_monitor
+        toggle_serial_monitor()
         save_setting('run_monitor', None)
 
 
