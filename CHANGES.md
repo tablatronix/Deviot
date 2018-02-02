@@ -1,17 +1,109 @@
 # Deviot Release Notes
-## Version 1.2.5 | 09 Sep
+
+## Version 2.1.5 | 11 Sept 2017
+
+#### Improvements
+* Updated Chinese Language (Thanks to @chkb123456)
+* Replaced the configparser by readconfig library to avoid remove comments (Issue: https://github.com/gepd/Deviot/issues/144)
+* Alert the user when the plugin is updated
+* Better syntax assign to IOT files
+* Display the develop version in the status bar (Issue: https://github.com/gepd/Deviot/issues/164)
+* Do not move the sketch if there is a symlink in the 'src' folder (issue: https://github.com/gepd/Deviot/issues/165)
+* Remove extra library flag after compile/upload
+* Add programmer flags only when the firmware is uploading, and removing it when it finish
+
+#### Bugs
+* Multiples fixes after renaming the package in the Package Control repository
+* Read platformio.ini after move the buffer to a new path (Issue: https://github.com/gepd/Deviot/issues/165#issuecomment-327986058)
+* Split syntax keywords in new lines to avoid make ST crash
+* Avoid remove flags in PIO structure projects
+* Serial Fix, to allow port names with non ascii characters
+
+## Version 2.1.1 | 17 Aug 2017
+
+#### Bugs
+* Avoid to remove previous filters (src_filters) in platformio.ini
+* Add Arduino.h library at the beginning of the sketch to avoid errors when compiled (Issue: https://github.com/gepd/Deviot/issues/142)
+
+## Version 2.1.0 | 14 Aug 2017
+
+#### New
+* Text history in the "Send" Serial Monitor input panel (Issue: https://github.com/gepd/Deviot/issues/84)
+* Deviot fala Portugues (Thanks to Alexandre Fernandes)
+* Experimental feature to avoid wrong line number with ino files
+
+#### Improvements
+* Show a progress bar when the PlatformIO terminal is used
+* Updated caption for "Clean Monitor" to avoid confusion when the quick panel use
+* Updated shortcuts to avoid override sublime text hot keys in Linux and OSX (Issue: https://github.com/gepd/Deviot/issues/132)
+* QuickPanel shorcut will be the same in all platforms (ctrl+alt+q)
+* Rebuild the syntax file after add/remove an extra library folder
+* Highlight improvements
+* Changed the setup settings to a new file to make the plugin compatible with the sync plugin(s). This change will allow to exclude the deviot.ini file locate in Package/User/Deviot in the sync plugin (Issue: https://github.com/gepd/Deviot/issues/127)
+* Bring back the persistence in the "send" input text (Issue: https://github.com/gepd/Deviot/issues/135)
+* Improved the way to implement the phantom (create and hide)
+
+#### Bugs
+* Avoid to stop the message queue after use the first command in the platformIO terminal
+* Search libraries in the extra library folder if it's set
+* Show the list of examples instead of "Import Library" list
+* Some Linux distro and OSX versions are not working well, when "pio" command is use. "plaformio" will be used instead.
+* Make sure the serial port is in use before to remove it
+* Check the last action when not IOT file is in the buffer
+* When PlatformIO is already installed and accessible. The command won't be modified (Issue: https://github.com/gepd/Deviot/issues/133)
+* Check and replace the old syntax file after load the plugin (Issue: https://github.com/gepd/Deviot/issues/133)
+* Make sure to get the extension of the file in buffer (Issue: https://github.com/gepd/Deviot/issues/139)
+* Force to initialize the sketch even if it already exitst in the temp folder when "Use PlatformIO Structure" is activated. The 'src_dir' flag will be add before compile/upload the sketch and removed after the task is finished (issue: https://github.com/gepd/Deviot/issues/137)
+
+## Version 2.0.1 | 03 Jul 2017
+* Improvement Syntax is created even if the PlatformIO setup fails (Issue: https://github.com/gepd/Deviot/issues/125)
+* Improvement Force Sublime Text to assign deviot syntax when it's a IOT file (Issue: https://github.com/gepd/Deviot/issues/125)
+* Improvement The console will print the error when installation fails
+* Bug fix removing the preferences files who was making  crashing Sublime Text
+* Multiples Bug fixes installing PlatformIO in macOS (Issue: https://github.com/gepd/Deviot/issues/124)
+
+## Version 2.0.0 | 02 Jul 2017
+* Plugin totally rewritten
+* New PlatformIO console
+* New Quick Panel, easy access to all deviot features
+* New Show error in a phantom window
+* New support for symlink
+* New serial port selection shows the full name of the port
+* New auto-clean serial monitor view (Serial Monitor > Auto-Clean)
+* New clean Serial Monitor option (Serial Monitor > Clean)
+* New show/hide the information of the status bar (Options > Show Information in the Status Bar) (Issue: https://github.com/gepd/Deviot/issues/100)
+* New option to overwrite the the upload speed (Issue: https://github.com/gepd/Deviot/issues/122)
+* New option to re-build the boards file when it's corrupted (Options > Rebuild Boards File)
+* New option to re-build the syntax and completions files (Options > Rebuild Syntax And Completions File)
+* New option to re-build the list of libraries if it's correcupted (Library Options > Rebuild Library List)
+* New Deviot parla Italiano (Thanks to Antonio Vivace) 
+* New Deviot mówi po włosku (Thanks to Jacek Czarnecki)
+* New snippet 'inotem' to write setup and loop functions
+* Improvement mDNS service discovery is more reliable (Issues: https://github.com/gepd/Deviot/issues/103)
+* Improvement OTA auth, removes the 'upload_flags' when no password is needed (Issue: https://github.com/gepd/Deviot/issues/116)
+* Improvement the context menu is translated to the selected language
+* Improvement Language selection is shown in the Quick Panel
+* Improvement Change the plugin language do not needs to restart ST anymore
+* Improvement Better code highlight
+* Improvement search library with less than 4 charactes (Issue: https://github.com/gepd/Deviot/issues/97)
+* Bug fix Not more errors when the sketch is moved to another path (Issue:https://github.com/gepd/Deviot/issues/73)
+* Bug fix to avoid remove 'upload_speed' when it was set manually (Issue: https://github.com/gepd/Deviot/issues/58)
+* Bug fix listing library examples with deeper levels (Issue: https://github.com/gepd/Deviot/issues/82)
+* Others minor bugs fixed
+
+## Version 1.2.5 | 09 Sep 2016  
 * Fix persisting bug in mDNSCheck (Issue: https://github.com/gepd/Deviot/issues/59)
 * Bug fix to avoid remove 'upload_speed' when it was set manually in the ini file (Issue: https://github.com/gepd/Deviot/issues/58)
 * Bug fix checking PlatformIO updates
 
-## Version 1.2.4 | 01 Sep
+## Version 1.2.4 | 01 Sep 2016
 * New feature to highlight errors in sketch
 * New feature to scroll to the error line from console
 * Add syntax recognition for boolean, byte and word var type
-* Bug Fix checking ota in esp  (issues: https://github.com/gepd/Deviot/issues/53 https://github.com/gepd/Deviot/issues/55)
+* Bug Fix checking ota in esp  (Issues: https://github.com/gepd/Deviot/issues/53 https://github.com/gepd/Deviot/issues/55)
 * Bug fix reading comments in ini file with ";" marker
 
-## Version 1.2.3 | 25 Aug
+## Version 1.2.3 | 25 Aug 2016
 * New option "Previous" to back when a library was selected in the examples list
 * Deviot install uses "virtualenv 14.0.6" to simplify the process
 * Improved chinese translation (Thanks to "loong")
@@ -30,16 +122,16 @@
 * Bug fix saving the sketch before build/upload
 * Bug fix in menu option 'Open Build Config File' introduced in previous release
 * Factorized serial port feature
-* Factorized project recognition
+* Factorized project recognition!
 
-## Version 1.2.2 | 18 Aug
+## Version 1.2.2 | 18 Aug 2016
 * Support for PlatformIO 3.0
 * Other minor fixes
 
-## Version 1.2.1 | 18 Aug
+## Version 1.2.1 | 18 Aug 2016
 * Adding console feedback when a PlatformIO update is available
 
-## Version 1.2.0 | 17 Aug
+## Version 1.2.0 | 17 Aug 2016
 * Support for mDNS autodiscover and upload with mDNS port (OTA)
 * New Programmer menu option
 * New colors in Deviot Console
@@ -67,14 +159,14 @@
 * Removed Support for ST2
 * Others minor bugs fixed
 
-## Version 1.1.10 | 28 Jun
+## Version 1.1.10 | 28 Jun 2016
 * Fix bug saving the platformio version after update it
 
-## Version 1.1.9 | 12 May
+## Version 1.1.9 | 12 May 2016
 * Fixed bug checking the current version of python
 * Removed not used context menu options
 
-## Version 1.1.8 | 12 May
+## Version 1.1.8 | 12 May 2016
 * New Snippets
 * New Korean Language (Thanks to gro)
 * New auto scroll option in deviot menu
